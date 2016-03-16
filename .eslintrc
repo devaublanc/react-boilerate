@@ -26,5 +26,14 @@
         "react/jsx-no-undef": 1,
         "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": 1
+    },
+    "globals": {
+        "Promise": false,
+        "describe": false,
+        "it": false,
+        "before": false,
+        "beforeEach": false,
+        "after": false,
+        "afterEach": false
     }
 }
