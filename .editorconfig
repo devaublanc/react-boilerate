@@ -16,4 +16,8 @@ trim_trailing_whitespace = false
 
 [app/**.js]
 indent_style = space
+indent_size = 4
+
+[app/**.css]
+indent_style = space
 indent_size = 2
