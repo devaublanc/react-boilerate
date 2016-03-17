@@ -1,1 +1,8 @@
+.DS_Store
+.sass-cache
+.tmp
+.idea
 node_modules
+build
+dist
+npm-debug.log
