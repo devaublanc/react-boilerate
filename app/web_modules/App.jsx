@@ -1,11 +1,15 @@
 import React from 'react';
-import Hello from 'Hello';
+import Example from 'Example';
+import Toggle from 'Toggle/Toggle';
 
 export default class App extends React.Component {
     render() {
         return (
             <div>
-                <Hello />                
+                <Example />
+                <Toggle onToggle={(toggle) => {alert('prout ' + toggle)}}>
+                    Hahaha
+                </Toggle>
             </div>
         );
     }
