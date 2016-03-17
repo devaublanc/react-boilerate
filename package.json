@@ -8,6 +8,9 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "test": "ava",
+    "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
+    "watch:test": "ava --watch",
+    "watch:cover": "nodemon --quiet --watch app --exec npm run cover -s",
     "lint": "eslint . --ext .js --ext .jsx || true"
   },
   "license": "MIT",
@@ -27,6 +30,7 @@
     "eslint-plugin-react": "4.2.1",
     "ignore-styles": "1.2.0",
     "jsdom": "8.1.0",
+    "nyc": "6.1.1",
     "postcss-calc": "5.2.0",
     "postcss-color-rebeccapurple": "2.0.0",
     "postcss-custom-media": "5.0.1",
@@ -53,7 +57,6 @@
       "app/web_modules/**/__tests__/*.test.js"
     ],
     "failFast": true,
-    "watch": true,
     "verbose": true,
     "require": [
       "babel-core/register",
