@@ -6,3 +6,5 @@ node_modules
 build
 dist
 npm-debug.log
+coverage
+.nyc_output/
