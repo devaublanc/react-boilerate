@@ -3,7 +3,8 @@
 .tmp
 .idea
 node_modules
-build
+build/bundle.dev.js
+build/index.html
 dist
 npm-debug.log
 coverage

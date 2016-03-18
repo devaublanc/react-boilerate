@@ -4,25 +4,28 @@ const merge = require('webpack-merge');
 
 // postcss
 const webpackPostcssTools = require('webpack-postcss-tools');
-const colorsMap = webpackPostcssTools.makeVarMap('app/css/colors.css');
+const colorsMap = webpackPostcssTools.makeVarMap('web_modules/app/css/colors.css');
 
 const TARGET = process.env.npm_lifecycle_event;
 
 var variablesMap = Object.assign({}, colorsMap.vars);
 
 const PATHS = {
-    app: path.join(__dirname, 'app'),
+    // app: path.join(__dirname, 'app'),
+    dev: path.join(__dirname, 'entries/dev.js'),
+    prod: path.join(__dirname, 'entries/prod.js'),
     build: path.join(__dirname, 'build')
 };
 
 process.env.BABEL_ENV = TARGET;
 
+
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/************************************************ COMMON ************************************************************/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
 const common = {
-    // Entry accepts a path or an object of entries. We'll be using the
-    // latter form given it's convenient with more complex configurations.
-    entry: {
-        app: PATHS.app
-    },
 
     // Add resolve.extensions.
     // '' is needed to allow imports without an extension.
@@ -33,20 +36,18 @@ const common = {
 
     output: {
         path: PATHS.build,
-        filename: 'bundle.js'
+        filename: 'bundle.dev.js'
     },
 
     module: {
         preLoaders: [
             {
                 test: /\.css$/,
-                loaders: ['postcss'],
-                include: PATHS.app
+                loaders: ['postcss']
             },
             {
                 test: /\.jsx?$/,
-                loaders: ['eslint'],
-                include: PATHS.app
+                loaders: ['eslint']
             }
         ],
         loaders: [
@@ -56,9 +57,7 @@ const common = {
                 loaders: [
                     'style-loader',
                     'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-                ],
-                // Include accepts either a path or an array of paths.
-                include: PATHS.app
+                ]
             },
             {
                 test: /\.jsx?$/,
@@ -69,10 +68,7 @@ const common = {
                 query: {
                     cacheDirectory: true,
                     presets: ['react', 'es2015', 'survivejs-kanban']
-                },
-                // Parse only app files! Without this it will go through entire project.
-                // In addition to being slow, that will most likely result in an error.
-                include: PATHS.app
+                }
             }
         ]
     },
@@ -88,9 +84,19 @@ const common = {
     ]
 };
 
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/************************************************** DEV *************************************************************/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
 // Default configuration
 if (TARGET === 'start' || !TARGET) {
     module.exports = merge(common, {
+        // Entry accepts a path or an object of entries. We'll be using the
+        // latter form given it's convenient with more complex configurations.
+        entry: {
+            app: PATHS.dev
+        },
         devServer: {
             devtool: 'eval-source-map',
 
@@ -123,6 +129,53 @@ if (TARGET === 'start' || !TARGET) {
     });
 }
 
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/************************************************ BUILD *************************************************************/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
 if (TARGET === 'build') {
-    module.exports = merge(common, {});
+    module.exports = merge(common, {
+        // Entry accepts a path or an object of entries. We'll be using the
+        // latter form given it's convenient with more complex configurations.
+        entry: {
+            app: PATHS.dev
+        }
+    });
+}
+
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/********************************************** PRODUCTION **********************************************************/
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+
+if (TARGET === 'deploy') {
+    module.exports = merge(common, {
+        // Entry accepts a path or an object of entries. We'll be using the
+        // latter form given it's convenient with more complex configurations.
+        entry: {
+            app: PATHS.prod
+        },
+
+        output: {
+            path: PATHS.build,
+            filename: 'bundle.js',
+            libraryTarget: 'commonjs2'
+        },
+        externals: [{
+            react: {
+                root: 'React',
+                commonjs2: 'react',
+                commonjs: 'react',
+                amd: 'react'
+            },
+            'react-dom': {
+                root: 'ReactDOM',
+                commonjs2: 'react-dom',
+                commonjs: 'react-dom',
+                amd: 'react-dom'
+            }
+        }]
+    });
 }

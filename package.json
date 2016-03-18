@@ -1,11 +1,11 @@
 {
-  "name": "react-boilerate",
   "version": "1.0.0",
-  "description": "Boilerplate for React.js components",
+  "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
-  "main": "index.js",
+  "main": "./build/bundle.js",
   "scripts": {
     "build": "webpack",
+    "deploy": "webpack",
     "start": "webpack-dev-server",
     "test": "ava",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
@@ -48,7 +48,7 @@
   },
   "ava": {
     "files": [
-      "app/web_modules/**/__tests__/*.test.js"
+      "web_modules/**/__tests__/*.test.js"
     ],
     "failFast": true,
     "verbose": true,
@@ -73,6 +73,6 @@
   },
   "keywords": [
     "react",
-    "reactjs"    
+    "reactjs"
   ]
 }
