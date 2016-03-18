@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
   "main": "./build/bundle.js",
