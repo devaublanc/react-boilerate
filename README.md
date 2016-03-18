@@ -16,7 +16,7 @@ $ npm i
 $ npm start
 ```
 
-Then got to [http://localhost:8080/](http://localhost:8080/)
+Then go to [http://localhost:8080/](http://localhost:8080/)
 
 
 ### Export package
