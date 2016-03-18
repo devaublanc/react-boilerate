@@ -6,7 +6,7 @@ import {renderToStaticMarkup} from 'react-dom/server'
 import {render} from 'react-dom'
 import {Simulate} from 'react-addons-test-utils'
 
-import Toggle from '../Toggle'
+import Toggle from '../'
 
 test('toggle--off class applied by default', t => {
     const output = renderStatic()
