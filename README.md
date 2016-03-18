@@ -1,6 +1,6 @@
 # REACT STARTER KIT
 
-> For create a react App
+> To create a react App
 
 ## Installation
 
