@@ -67,7 +67,7 @@ const common = {
                 loader: 'babel',
                 query: {
                     cacheDirectory: true,
-                    presets: ['react', 'es2015', 'survivejs-kanban']
+                    presets: ['react', 'es2015']
                 }
             }
         ]
