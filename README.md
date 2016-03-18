@@ -43,7 +43,7 @@ $ npm run watch:cover
 ## Directory Layout
 
 ```
-├── /build/                     # The folder for compiled output
+├── /build/                     # The folder for compiled outputs
 ├── ├── /bundle.dev.js          # The bundle unminified
 ├── ├── /bundle.js              # The bundle minified for the prod env
 ├── ├── /index.html             # The page html where the app is render
