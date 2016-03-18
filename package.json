@@ -3,6 +3,9 @@
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
   "main": "./build/bundle.js",
+  "files": [
+    "export"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:devaublanc/react-starter-kit.git"
