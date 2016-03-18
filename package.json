@@ -43,14 +43,8 @@
     "stylelint": "5.0.1",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1",
-    "webpack-merge": "0.8.3"
-  },
-  "babel": {
-    "presets": [
-      "babel-preset-react",
-      "babel-preset-es2015",
-      "babel-preset-stage-1"
-    ]
+    "webpack-merge": "0.8.3",
+    "webpack-postcss-tools": "1.1.1"
   },
   "ava": {
     "files": [
@@ -79,7 +73,6 @@
   },
   "keywords": [
     "react",
-    "reactjs",
-    "boilerplate"
+    "reactjs"    
   ]
 }
