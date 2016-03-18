@@ -20,7 +20,7 @@ class Toggle extends React.Component {
         const toggledClassName = `toggle--${onOff}`
         return (
             <div className={`toggle ${toggledClassName}`}>
-                <span className={styles.label}>hey</span>
+                <span className={styles.label}>Hey ! </span>
                 <button
                     onClick={() => this.handleToggleClick()}
                     >

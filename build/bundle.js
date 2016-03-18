@@ -111,7 +111,7 @@ module.exports =
 	                _react2.default.createElement(
 	                    'span',
 	                    { className: _index2.default.label },
-	                    'hey'
+	                    'Hey ! '
 	                ),
 	                _react2.default.createElement(
 	                    'button',
