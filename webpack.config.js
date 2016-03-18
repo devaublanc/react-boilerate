@@ -3,12 +3,12 @@ const path = require('path');
 const merge = require('webpack-merge');
 
 // postcss
-var webpackPostcssTools = require('webpack-postcss-tools');
+const webpackPostcssTools = require('webpack-postcss-tools');
+const colorsMap = webpackPostcssTools.makeVarMap('app/css/colors.css');
 
 const TARGET = process.env.npm_lifecycle_event;
 
-// var variablesMap = Object.assign({},colorsMap.vars,fontsMap.vars,layoutMap.vars,zIndexMap.vars,sizesMap.vars,delayMap.vars)
-var variablesMap = {}
+var variablesMap = Object.assign({}, colorsMap.vars);
 
 const PATHS = {
     app: path.join(__dirname, 'app'),
