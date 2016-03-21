@@ -176,6 +176,14 @@ if (TARGET === 'deploy') {
                 commonjs: 'react-dom',
                 amd: 'react-dom'
             }
-        }]
+        }],
+        plugins: ([
+            new webpack.optimize.DedupePlugin(),
+            new webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    warnings: false
+                }
+            })
+        ])
     });
 }
