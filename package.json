@@ -3,6 +3,7 @@
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
   "main": "./build/bundle.js",
+  "name": "react-starter-kit",
   "files": [
     "export"
   ],
