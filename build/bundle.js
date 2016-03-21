@@ -55,7 +55,7 @@ module.exports =
 
 	'use strict';
 
-	module.exports = 'Hello';
+	module.exports = 'Hello Benjamin';
 
 /***/ }
 /******/ ]);
