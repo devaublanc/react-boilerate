@@ -1,21 +1,22 @@
 {
     "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "sourceType": "module"
+     "env" : {
+       "browser" : true,
+       "es6": true,
+     },
+     "parserOptions" : {
+        "emcaVersion" : 7,
+        "sourceType" : "module",
+        "ecmaFeatures" : {
+            jsx: true
+        }
     },
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "plugins": [
-        "react"
+    "parser": "babel-eslint",
+    "plugins" : [
+       "react"
     ],
     "rules": {
-        "no-console": 0,
+        "no-console": 1,
         "new-cap": 0,
         "strict": 0,
         "no-underscore-dangle": 0,

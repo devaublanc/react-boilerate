@@ -3,6 +3,13 @@ import React, {PropTypes} from 'react'
 import styles from './index.css'
 
 class Toggle extends React.Component {
+
+    static propTypes = {
+        initialToggledOn: PropTypes.bool,
+        onToggle: PropTypes.func,
+        children: PropTypes.any
+    }
+
     constructor(props) {
         super(props)
 
@@ -20,7 +27,7 @@ class Toggle extends React.Component {
         const toggledClassName = `toggle--${onOff}`
         return (
             <div className={`toggle ${toggledClassName}`}>
-                <span className={styles.label}>Hey ! </span>
+                <span className={styles.label}>Hey adsadas! </span>
                 <button
                     onClick={() => this.handleToggleClick()}
                     >
@@ -29,12 +36,6 @@ class Toggle extends React.Component {
             </div>
         )
     }
-}
-
-Toggle.propTypes = {
-    initialToggledOn: PropTypes.bool,
-    onToggle: PropTypes.func,
-    children: PropTypes.any
 }
 
 export default Toggle
