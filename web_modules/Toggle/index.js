@@ -10,18 +10,19 @@ class Toggle extends React.Component {
         children: PropTypes.any
     }
 
+    handleToggleClick() {
+        const toggledOn = !this.state.toggledOn
+        this.props.onToggle(toggledOn)
+        this.setState({toggledOn});
+    }
+
     constructor(props) {
         super(props)
-
         this.state = {
             toggledOn: props.initialToggledOn || false
         }
     }
-    handleToggleClick() {
-        const toggledOn = !this.state.toggledOn
-        this.props.onToggle(toggledOn)
-        this.setState({toggledOn})
-    }
+
     render() {
         const onOff = this.state.toggledOn ? 'on' : 'off'
         const toggledClassName = `toggle--${onOff}`

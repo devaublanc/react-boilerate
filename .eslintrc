@@ -16,17 +16,59 @@
        "react"
     ],
     "rules": {
+        "indent": [2, 4],
+        "strict": [2, "global"],
         "no-console": 1,
-        "new-cap": 0,
-        "strict": 0,
+        "no-debugger": 1,
+        "no-alert": 1,
+        "no-unused-vars": 1,
+        "no-undef": 2,
+        "camelcase": [1, {"properties": "never"}],
+        "no-multi-spaces": 1,
+        "valid-jsdoc": 1,
         "no-underscore-dangle": 0,
-        "no-use-before-define": 0,
-        "eol-last": 0,
+        "no-extra-parens": 0,
         "quotes": [2, "single"],
-        "jsx-quotes": 1,
-        "react/jsx-no-undef": 1,
-        "react/jsx-uses-react": 1,
-        "react/jsx-uses-vars": 1
+        "comma-spacing": 0,
+        "space-infix-ops": 0,
+        "key-spacing": 0,
+        "eol-last": 0,
+        "react/no-multi-comp": 2,
+        "react/prop-types": 2,
+        "react/display-name": 0,
+        "react/self-closing-comp": 1,
+        "react/wrap-multilines": 0,
+        "react/no-did-mount-set-state": 2,
+        "react/no-did-update-set-state": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scope": 0,
+        "react/sort-comp": [
+            2,
+            {
+                "order": [
+                    "/^(propTypes|defaultProps|state|contextTypes)$/",
+                    "everything-else",
+                    "lifecycle",
+                    "render"
+                ],
+                "groups": {
+                    "lifecycle": [
+                        "constructor",
+                        "displayName",
+                        "statics",
+                        "getChildContext",
+                        "componentWillMount",
+                        "componentDidMount",
+                        "componentWillReceiveProps",
+                        "shouldComponentUpdate",
+                        "componentWillUpdate",
+                        "componentDidUpdate",
+                        "componentWillUnmount"
+                    ]
+                }
+            }
+        ]
     },
     "globals": {
         "Promise": false

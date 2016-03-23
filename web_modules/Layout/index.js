@@ -10,7 +10,7 @@ export default class Layout extends Component {
     render() {
         return (
             <div className={ styles.root }>
-                <Toggle onToggle={(toggle) => {alert('prout ' + toggle)}}>
+                <Toggle onToggle={(toggle) => { alert('prout ' + toggle)}}>
                     Hahaha
                 </Toggle>
             </div>
