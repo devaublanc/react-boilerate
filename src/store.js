@@ -13,7 +13,7 @@ import fetchMiddleware from 'middlewares/fetch'
 
 // Create an instance for superagentMiddleware
 const fetchMiddlewareInstance = fetchMiddleware({
-    base : 'https://exampleapi.com',
+    base : 'https://api.github.com',
     defaultHeaders : {
         ['Accept'] : 'application/json',
         ['Content-type'] : 'application/json'
@@ -24,9 +24,9 @@ const fetchMiddlewareInstance = fetchMiddleware({
     onRequest : (request, state) => {
         /* this code is called before each request, you can modify it */
 
-        if (state.session.token) {
-            request.params['token'] = 'jwt.token.1212GJ23'
-        }
+        // if (state.session.token) {
+        //     request.params['token'] = 'jwt.token.1212GJ23'
+        // }
 
         return request
     }
