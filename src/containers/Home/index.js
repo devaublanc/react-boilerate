@@ -4,7 +4,7 @@ import styles from './index.css'
 
 import Toggle from 'components/Toggle';
 
-export default class Layout extends Component {
+export default class Home extends Component {
 
 
     render() {
