@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import styles from './index.css'
 
-import Toggle from 'Toggle';
+import Toggle from 'components/Toggle';
 
 export default class Layout extends Component {
 
