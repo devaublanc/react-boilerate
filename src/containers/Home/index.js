@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import Toggle from 'components/Toggle';
-
 import { get as getRepos } from 'actions/github'
 
 import styles from './index.css'
@@ -30,9 +28,6 @@ export default class Home extends Component {
 
         return (
             <div className={ styles.root }>
-                <Toggle onToggle={(toggle) => { alert('prout ' + toggle)}}>
-                    Hahaha
-                </Toggle>
                 <button onClick={ getRepos }>GET REPOS GITHUB</button>
             </div>
         )

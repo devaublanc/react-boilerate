@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 
 import App from 'containers/App';
@@ -17,8 +17,7 @@ ReactDOM.render(
     <Provider store={ store }>
         <Router history={ history }>
             <Route component={ App }>
-                <IndexRoute component={ Home } />
-                <Route path='/home' component={ Home } />
+                <Route path='/' component={ Home } />
                 <Route path='/contact' component={ Contact } />
             </Route>
         </Router>

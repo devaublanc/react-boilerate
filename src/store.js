@@ -6,9 +6,7 @@ import { browserHistory } from 'react-router'
 // Root reducer
 import rootReducer from 'reducers'
 
-
 // Custom middleware
-// import requestQueueMiddleware from 'middlewares/requestQueue'
 import fetchMiddleware from 'middlewares/fetch'
 
 // Create an instance for superagentMiddleware
@@ -20,16 +18,16 @@ const fetchMiddlewareInstance = fetchMiddleware({
     },
     defaultParams : {
         api_key : '0123445689'
-    },
-    onRequest : (request, state) => {
-        /* this code is called before each request, you can modify it */
-
-        // if (state.session.token) {
-        //     request.params['token'] = 'jwt.token.1212GJ23'
-        // }
-
-        return request
     }
+    // onRequest : (request, state) => {
+    //     /* this code is called before each request, you can modify it */
+    //
+    //     // if (state.session.token) {
+    //     //     request.params['token'] = 'jwt.token.1212GJ23'
+    //     // }
+    //
+    //     return request
+    // }
 })
 
 
