@@ -38,6 +38,12 @@ $ npm run watch:test
 $ npm run cover
 ```
 
+### Run the local server for styleguide
+
+```console
+$ npm run styleguide-server
+```
+
 ## Directory Layout
 
 ```
