@@ -5,16 +5,20 @@ const merge = require('webpack-merge');
 
 // postcss
 const webpackPostcssTools = require('webpack-postcss-tools');
-const colorsMap = webpackPostcssTools.makeVarMap('web_modules/app/css/colors.css');
+const colorsMap = webpackPostcssTools.makeVarMap('src/config/css/colors.css');
+const autoprefixer = require('autoprefixer');
+const postcssCustomProperties = require('postcss-custom-properties');
+const postcssRebeccaPurple = require('postcss-color-rebeccapurple')
+const postcssSvgInline = require('postcss-inline-svg')
+const postcssCalc = require('postcss-calc')
 
 const TARGET = process.env.npm_lifecycle_event;
 
-var variablesMap = Object.assign({}, colorsMap.vars);
+const variablesMap = Object.assign({}, colorsMap.vars);
 
 const PATHS = {
-    // app: path.join(__dirname, 'app'),
-    dev: path.join(__dirname, 'entries/dev.js'),
-    prod: path.join(__dirname, 'entries/prod.js'),
+    src: path.join(__dirname, 'src'),
+    dev: path.join(__dirname, 'src/index.js'),
     build: path.join(__dirname, 'build')
 };
 
@@ -32,12 +36,8 @@ const common = {
     // '' is needed to allow imports without an extension.
     // Note the .'s before extensions as it will fail to match without!!!
     resolve: {
+        modulesDirectories: [PATHS.src, 'node_modules'],
         extensions: ['', '.js', '.jsx']
-    },
-
-    output: {
-        path: PATHS.build,
-        filename: 'bundle.dev.js'
     },
 
     module: {
@@ -71,13 +71,13 @@ const common = {
     },
     postcss: [
         webpackPostcssTools.prependTildesToImports,
-        require('autoprefixer'),
-        require('postcss-custom-properties')({
+        autoprefixer,
+        postcssCustomProperties({
             variables: variablesMap
         }),
-        require('postcss-color-rebeccapurple'),
-        require('postcss-inline-svg'),
-        require('postcss-calc')()
+        postcssRebeccaPurple,
+        postcssSvgInline,
+        postcssCalc()
     ]
 };
 
@@ -93,6 +93,10 @@ if (TARGET === 'start' || !TARGET) {
         // latter form given it's convenient with more complex configurations.
         entry: {
             app: PATHS.dev
+        },
+        output: {
+            path: PATHS.build,
+            filename: 'bundle.dev.js'
         },
         devServer: {
             devtool: 'eval-source-map',
@@ -137,43 +141,11 @@ if (TARGET === 'build') {
         // latter form given it's convenient with more complex configurations.
         entry: {
             app: PATHS.dev
-        }
-    });
-}
-
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-/********************************************** PRODUCTION **********************************************************/
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-
-if (TARGET === 'deploy') {
-    module.exports = merge(common, {
-        // Entry accepts a path or an object of entries. We'll be using the
-        // latter form given it's convenient with more complex configurations.
-        entry: {
-            app: PATHS.prod
         },
-
         output: {
             path: PATHS.build,
-            filename: 'bundle.js',
-            libraryTarget: 'commonjs2'
+            filename: 'bundle.prod.js'
         },
-        externals: [{
-            react: {
-                root: 'React',
-                commonjs2: 'react',
-                commonjs: 'react',
-                amd: 'react'
-            },
-            'react-dom': {
-                root: 'ReactDOM',
-                commonjs2: 'react-dom',
-                commonjs: 'react-dom',
-                amd: 'react-dom'
-            }
-        }],
         plugins: ([
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({
