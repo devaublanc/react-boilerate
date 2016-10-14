@@ -11,3 +11,6 @@ dist
 npm-debug.log
 coverage
 .nyc_output/
+.webpack.config.js.swp
+.package.json.swp
+build/
