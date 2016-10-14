@@ -80,7 +80,7 @@ $ npm run styleguide-build
 * [webpack](https://webpack.github.io/docs/)
 * [Babel](https://babeljs.io/)
 * [PostCSS](http://postcss.org/)
-* [AVA](https://github.com/sindresorhus/ava)
+* [Mocha](https://mochajs.org/)
 
 ## Contributing
 * [Contributing] (CONTRIBUTING.md)
