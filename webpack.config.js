@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+
 // postcss
 const webpackPostcssTools = require('webpack-postcss-tools');
 const colorsMap = webpackPostcssTools.makeVarMap('src/config/css/colors.css');
@@ -125,7 +128,8 @@ if (TARGET === 'start' || !TARGET) {
             port: process.env.PORT
         },
         plugins: [
-            new webpack.HotModuleReplacementPlugin()
+            new webpack.HotModuleReplacementPlugin(),
+            new DashboardPlugin(new Dashboard().setData)
         ]
     });
 }

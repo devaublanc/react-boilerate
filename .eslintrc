@@ -71,6 +71,8 @@
         ]
     },
     "globals": {
-        "Promise": false
+        "Promise": false,
+        "it": false,
+        "describe": false
     }
 }
