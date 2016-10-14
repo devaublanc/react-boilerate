@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
@@ -58,6 +59,7 @@ const common = {
             {
                 // Test expects a RegExp! Note the slashes!
                 test: /\.css$/,
+                exclude: /node_modules/,
                 loaders: [
                     'style-loader',
                     'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
@@ -68,6 +70,7 @@ const common = {
                 // Enable caching for improved performance during development
                 // It uses default OS directory by default. If you need something
                 // more custom, pass a path to it. I.e., babel?cacheDirectory=<path>
+                exclude: /node_modules/,
                 loader: 'babel'
             }
         ]
@@ -152,6 +155,11 @@ if (TARGET === 'build') {
         },
         plugins: ([
             new webpack.optimize.DedupePlugin(),
+            new HtmlWebpackPlugin({
+                filename: 'index.html',
+                template: 'index.html',
+                inject: true
+            }),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false
