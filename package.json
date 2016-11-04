@@ -15,9 +15,10 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "mocha test/.setup.js src/**/__tests__/*.test.js",
+    "publish": "./scripts/publish.sh",
+    "test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
-    "watch:test": "mocha test/.setup.js src/**/__tests__/*.test.js --watch",
+    "watch:test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js --watch",
     "lint": "eslint . --ext .js --ext .jsx || true",
     "styleguide-server": "styleguidist server",
     "styleguide-build": "styleguidist build"
@@ -59,7 +60,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.3.0",
     "react-router-redux": "^4.0.2",
-    "react-styleguidist": "3.1.1",
+    "react-styleguidist": "4.0.1",
     "redux": "^3.5.1",
     "redux-thunk": "^2.0.1",
     "reselect": "^2.5.1",
