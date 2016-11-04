@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import { get as getRepos } from 'actions/github'
 
@@ -9,9 +10,7 @@ import styles from './index.css'
     (state) => ({
         repos: state.repos
     }),
-    (dispatch) => ({
-        getRepos: () => { dispatch(getRepos()) }
-    })
+    (dispatch) => bindActionCreators({ getRepos }, dispatch)
 )
 
 export default class Home extends Component {

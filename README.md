@@ -84,7 +84,7 @@ $ npm run build
 │   ├── /actions/               # Action creators for redux
 │   ├── /components/            # Components disconnected from the redux store
 │   │   ├── /Component/         # Component structure
-│   │       ├── /__tests__/     # Tests using AVA
+│   │       ├── /__tests__/     # Tests using Mocha
 │   │       ├── /index.css      # CSS for the component
 │   │       ├── /index.js       # React Component
 │   ├── /config/                # Project config
