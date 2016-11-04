@@ -2,14 +2,14 @@
 const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 // postcss
 const webpackPostcssTools = require('webpack-postcss-tools');
-const colorsMap = webpackPostcssTools.makeVarMap('src/config/css/colors.css');
+const globalMap = webpackPostcssTools.makeVarMap('src/config/css/global.css');
 const autoprefixer = require('autoprefixer');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssRebeccaPurple = require('postcss-color-rebeccapurple')
@@ -18,7 +18,7 @@ const postcssCalc = require('postcss-calc')
 
 const TARGET = process.env.npm_lifecycle_event;
 
-const variablesMap = Object.assign({}, colorsMap.vars);
+const variablesMap = Object.assign({}, globalMap.vars);
 
 const PATHS = {
     src: path.join(__dirname, 'src'),
@@ -132,7 +132,12 @@ if (TARGET === 'start' || !TARGET) {
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
-            new DashboardPlugin(new Dashboard().setData)
+            new DashboardPlugin(new Dashboard().setData),
+            new HtmlWebpackPlugin({
+                filename: 'index.html',
+                template: 'index.html',
+                inject: true
+            })
         ]
     });
 }

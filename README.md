@@ -1,6 +1,15 @@
 # REACT STARTER KIT
 
-> To create a react App
+> Webapp React/Redux/Webpack
+
+
+- [Installation](#installation)
+- [Development](#development)
+- [Production](#production)
+- [Releases](#releases)
+- [Contributing](#contibuting)
+- [Stack](#stack)
+
 
 ## Installation
 
@@ -19,11 +28,8 @@ $ npm start
 Then go to [http://localhost:8080/](http://localhost:8080/)
 
 
-### Run build production
 
-```console
-$ npm run build
-```
+## Development
 
 ### Run tests
 
@@ -50,7 +56,24 @@ $ npm run styleguide-server
 $ npm run styleguide-build
 ```
 
-## Directory Layout
+
+
+## Production
+
+### Publish a release
+
+```console
+$ npm run publish
+```
+
+### Run build production
+
+```console
+$ npm run build
+```
+
+
+## Architecture
 
 ```
 ├── /build/                     # The folder for compiled outputs
@@ -74,13 +97,21 @@ $ npm run styleguide-build
 └── package.json                # The list of libraries and utilities
 ```
 
-##STACK
 
+
+## Changelog
+* [Changelog](CHANGELOG.md)
+
+
+
+## Contributing
+* [Contributing](CONTRIBUTING.md)
+
+
+
+## Stack
 * [React.js](https://facebook.github.io/react/)
 * [webpack](https://webpack.github.io/docs/)
 * [Babel](https://babeljs.io/)
 * [PostCSS](http://postcss.org/)
 * [Mocha](https://mochajs.org/)
-
-## Contributing
-* [Contributing] (CONTRIBUTING.md)
