@@ -30,7 +30,7 @@ if [ -f VERSION ]; then
     if [ "$INPUT_STRING" = "" ]; then
         INPUT_STRING=$SUGGESTED_VERSION
     fi
-    echo "Version $INPUT_STRING:" > tmpfile
+    echo "# Version $INPUT_STRING:" > tmpfile
     git log --pretty=format:" - %s" "v$BASE_STRING"...HEAD --no-merges >> tmpfile
     echo "" >> tmpfile
     echo "" >> tmpfile
