@@ -1,6 +1,6 @@
 # REACT STARTER KIT
 
-> Webapp React/Redux/Webpack
+> Webapp React/Redux/Webpack/hot-loader
 
 
 - [Installation](#installation)
@@ -92,6 +92,7 @@ $ npm run build
 │   ├── /middlewares/           # Redux middlewares
 │   ├── /reducers/              # Redux reducers
 │   ├── /index.js               # Entry point of the application
+│   ├── /router.js              # Nested routes for react router
 │   ├── /store.js               # Redux sore configuration
 ├── webpack.config.js           # Configurations for client-side and server-side bundles
 └── package.json                # The list of libraries and utilities

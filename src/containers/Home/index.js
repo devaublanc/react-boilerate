@@ -27,7 +27,7 @@ export default class Home extends Component {
 
         return (
             <div className={ styles.root }>
-                <button onClick={ getRepos }>GET REPOS GITHUB</button>
+                <button onClick={ getRepos }>FETCH API GITHUB</button>
             </div>
         )
     }

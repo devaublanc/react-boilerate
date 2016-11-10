@@ -98,11 +98,16 @@ if (TARGET === 'start' || !TARGET) {
         // Entry accepts a path or an object of entries. We'll be using the
         // latter form given it's convenient with more complex configurations.
         entry: {
-            app: PATHS.dev
+            app: [
+                'react-hot-loader/patch',
+                'webpack-hot-middleware/client',
+                PATHS.dev
+            ]
         },
         output: {
             path: PATHS.build,
-            filename: 'bundle.dev.js'
+            filename: 'bundle.dev.js',
+            publicPath: PATHS.build
         },
         devServer: {
             devtool: 'eval-source-map',
@@ -112,7 +117,9 @@ if (TARGET === 'start' || !TARGET) {
             // Enable history API fallback so HTML5 History API based
             // routing works. This is a good default that will come
             // in handy in more complicated setups.
-            historyApiFallback: true,
+            historyApiFallback: {
+                index: path.join(PATHS.build, 'index.html')
+            },
             hot: true,
             inline: true,
             progress: true,
