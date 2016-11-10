@@ -73,6 +73,9 @@
     "globals": {
         "Promise": false,
         "it": false,
-        "describe": false
+        "describe": false,
+        module: false,
+        setImmediate: false,
+        require: false
     }
 }
