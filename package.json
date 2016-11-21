@@ -3,7 +3,7 @@
   "version": "0.0.0-semantically-released",
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
-  "main": "./build/bundle",
+  "main": "./build/bundle.prod.js",
   "files": [
     "build"
   ],
