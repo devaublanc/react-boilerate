@@ -86,6 +86,7 @@
     "webpack-postcss-tools": "1.1.1"
   },
   "dependencies": {
+    "classnames": "2.2.5",
     "react": "0.14.7",
     "react-dom": "0.14.7",
     "react-intl": "2.1.5",
@@ -99,5 +100,4 @@
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   }
-
 }
