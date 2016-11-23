@@ -18,8 +18,7 @@
   ],
   "bugs": {
     "url": "https://github.com/devaublanc/react-starter-kit/issues"
-  },
-  "private": true,
+  },  
   "scripts": {
     "commit": "git-cz",
     "build": "webpack",
