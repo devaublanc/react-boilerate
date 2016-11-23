@@ -28,7 +28,7 @@
     "test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js",
     "watch:test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js --watch",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov  --token=4301c7d9-985c-4247-9eaf-da6297a96d4f",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov --token=4301c7d9-985c-4247-9eaf-da6297a96d4f",
     "lint": "eslint . --ext .js --ext .jsx || true",
     "styleguide-server": "styleguidist server",
     "styleguide-build": "styleguidist build",
