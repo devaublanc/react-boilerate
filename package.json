@@ -1,5 +1,5 @@
 {
-  "name": "react-starter-kit",
+  "name": "react-skeleton-kit",
   "version": "0.0.0-semantically-released",
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
@@ -32,7 +32,7 @@
     "lint": "eslint . --ext .js --ext .jsx || true",
     "styleguide-server": "styleguidist server",
     "styleguide-build": "styleguidist build",
-    "semantic-release": "semantic-release pre && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "license": "MIT",
   "devDependencies": {
