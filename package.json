@@ -18,12 +18,12 @@
   ],
   "bugs": {
     "url": "https://github.com/devaublanc/react-starter-kit/issues"
-  },  
+  },
   "scripts": {
     "commit": "git-cz",
     "build": "webpack",
     "start": "webpack-dev-server",
-    "publish": "./scripts/publish.sh",
+    "release": "./scripts/publish.sh",
     "test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js",
     "watch:test": "NODE_PATH=./src mocha test/.setup.js src/**/__tests__/*.test.js --watch",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
