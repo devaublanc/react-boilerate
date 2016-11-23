@@ -97,7 +97,12 @@
     "redux-thunk": "2.0.1",
     "reselect": "2.5.1"
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
