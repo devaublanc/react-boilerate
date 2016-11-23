@@ -6,10 +6,6 @@ import Button from '../';
 
 describe('Button', function() {
 
-    it('useless test', function() {
-        expect(true).to.equal(true);
-    });
-
     it('root tag is a html button tag', function() {
         expect(shallow(<Button />).is('button')).to.equal(true);
     });
