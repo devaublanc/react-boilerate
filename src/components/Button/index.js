@@ -9,13 +9,11 @@ export default class Button extends Component {
         children: PropTypes.node,
         rootStyle: PropTypes.string,
         onClick: PropTypes.func,
-        type: PropTypes.string,
         model : PropTypes.number
     }
 
     static defaultProps = {
-        onClick: () => {},
-        type : 'button'
+        onClick: () => {}
     }
 
     render(){
@@ -23,21 +21,12 @@ export default class Button extends Component {
         const {
             children,
             rootStyle,
-            onClick,
-            model
+            onClick            
         } = this.props
 
-        const finalRootStyle = classNames(styles.root, {
-            [styles.validation] : model === 1,
-            [rootStyle] : rootStyle
-        })
-
         return (
-            <button
-                onClick={ () => onClick() }
-                className={ finalRootStyle }
-                >
-                    {children}
+            <button onClick={ () => onClick() } className={ classNames(styles.root, rootStyle) }>
+                {children}
             </button>
         )
     }
