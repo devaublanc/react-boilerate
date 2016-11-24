@@ -1,6 +1,6 @@
 {
   "name": "react-skeleton-kit",
-  "version": "0.0.0-semantically-released",
+  "version": "2.3.0",
   "description": "React starter KIT",
   "author": "Benjamin Devaublanc <benjamin.devaublanc@gmail.com> (http://bdevaublanc.io/)",
   "main": "./build/bundle.prod.js",
