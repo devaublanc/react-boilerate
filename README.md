@@ -5,6 +5,7 @@
 
 [![Travis](https://api.travis-ci.org/devaublanc/react-starter-kit.svg?style=flat-square)](https://travis-ci.org/devaublanc/react-starter-kit)
 [![codecov coverage](https://img.shields.io/codecov/c/github/devaublanc/react-starter-kit.svg?style=flat-square)](https://codecov.io/github/devaublanc/react-starter-kit)
+[![Commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![MIT License](https://img.shields.io/npm/l/react-player-ui.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 
