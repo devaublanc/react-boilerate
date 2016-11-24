@@ -1,10 +1,11 @@
-# REACT STARTER KIT
+# REACT SKELETON KIT
 
 > Webapp React/Redux/Webpack/hot-loader
 
 
 [![Travis](https://api.travis-ci.org/devaublanc/react-starter-kit.svg?style=flat-square)](https://travis-ci.org/devaublanc/react-starter-kit)
 [![codecov coverage](https://img.shields.io/codecov/c/github/devaublanc/react-starter-kit.svg?style=flat-square)](https://codecov.io/github/devaublanc/react-starter-kit)
+[![MIT License](https://img.shields.io/npm/l/react-player-ui.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 
 - [Installation](#installation)
