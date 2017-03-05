@@ -3,8 +3,6 @@
 .tmp
 .idea
 node_modules
-build/bundle.prod.js
-build/bundle.dev.js
 build/index.html
 styleguide
 dist

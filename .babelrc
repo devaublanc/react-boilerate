@@ -9,6 +9,7 @@
         "babel-plugin-syntax-trailing-function-commas",
         "babel-plugin-transform-class-properties",
         "babel-plugin-transform-export-extensions",
-        "babel-plugin-transform-object-rest-spread"
+        "babel-plugin-transform-object-rest-spread",
+        "transform-runtime"
     ]
 }
