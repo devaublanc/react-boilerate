@@ -79,33 +79,6 @@ $ npm run build
 ```
 
 
-## Architecture
-
-```
-├── /build/                     # The folder for compiled outputs
-├── ├── /bundle.dev.js          # The bundle unminified
-├── ├── /bundle.prod.js         # The bundle minified for the prod env
-├── ├── /index.html             # The page html where the app is render
-├── /src/                       # Sources
-│   ├── /actions/               # Action creators for redux
-│   ├── /components/            # Components disconnected from the redux store
-│   │   ├── /Component/         # Component structure
-│   │       ├── /__tests__/     # Tests using Mocha
-│   │       ├── /index.css      # CSS for the component
-│   │       ├── /index.js       # React Component
-│   ├── /config/                # Project config
-│   ├── /containers/            # Components connected to the redux store
-│   ├── /middlewares/           # Redux middlewares
-│   ├── /reducers/              # Redux reducers
-│   ├── /index.js               # Entry point of the application
-│   ├── /router.js              # Nested routes for react router
-│   ├── /store.js               # Redux sore configuration
-├── webpack.config.js           # Configurations for client-side and server-side bundles
-└── package.json                # The list of libraries and utilities
-```
-
-
-
 ## Changelog
 * [Changelog](CHANGELOG.md)
 
