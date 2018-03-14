@@ -9,8 +9,3 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * **architecture:** refactor the project with a fresh new configuration ([5f552a2](https://github.com/devaublanc/react-starter-kit/commit/5f552a2))
-
-
-
-<a name="0.1.1"></a>
-## 0.1.1 (2018-01-12)

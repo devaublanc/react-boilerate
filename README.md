@@ -1,4 +1,4 @@
-# XMS UI
+# REACT STARTER KIT
 
 ## Table of Contents
 
