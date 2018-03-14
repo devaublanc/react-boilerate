@@ -3,6 +3,12 @@
 
 ### Commit Message Format
 
+```
+ npm run commit
+```
+
+Follow the prompt instructions ;)
+
 Each commit message should include a **type**, a **scope** and a **subject**:
 
 ```

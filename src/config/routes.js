@@ -1,4 +1,6 @@
 export default {
-    home: '/',
-    contact: '/contact'
+  home: {
+    path: '/home',
+    label: 'Home'
+  }
 }

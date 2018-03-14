@@ -1,34 +1,48 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
+import { createSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { Div, Button } from 'glamorous'
 
-import { get as getRepos } from 'actions/github'
+// actions
+import { updateUi } from 'store/ui'
 
-import styles from './index.css'
+// selectors
+import { selectUiState } from 'store'
+
 
 @connect (
-    (state) => ({
-        repos: state.repos
-    }),
-    (dispatch) => bindActionCreators({ getRepos }, dispatch)
+  createSelector(
+    [selectUiState],
+    (ui) => ({
+      ui,
+    })
+  ),
+  (dispatch) => bindActionCreators({
+    updateUi
+  }, dispatch)
 )
+class Home extends Component {
 
-export default class Home extends Component {
+  static propTypes = {
+    ui: PropTypes.object,
+    updateUi: PropTypes.func
+  }
 
-    static propTypes = {
-        getRepos: PropTypes.func
-    }
+  render() {
+    return (
+      <Div>
+        <h1>Home { this.props.ui.foo }</h1>
+        <Button onClick={() => {
+          this.props.updateUi({
+            foo: 'bar'
+          })
+        }}>Update UI</Button>
 
-    render() {
-
-        const {
-            getRepos
-        } = this.props
-
-        return (
-            <div className={ styles.root }>
-                <button onClick={ getRepos }>FETCH API GITHUB</button>
-            </div>
-        )
-    }
+      </Div>
+    );
+  }
 }
+
+export default Home;

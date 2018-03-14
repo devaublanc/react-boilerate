@@ -1,97 +1,38 @@
-# REACT SKELETON KIT
+# XMS UI
 
-> Webapp React/Redux/Webpack/hot-loader
+## Table of Contents
 
-
-[![Travis](https://api.travis-ci.org/devaublanc/react-starter-kit.svg?style=flat-square)](https://travis-ci.org/devaublanc/react-starter-kit)
-[![codecov coverage](https://img.shields.io/codecov/c/github/devaublanc/react-starter-kit.svg?style=flat-square)](https://codecov.io/github/devaublanc/react-starter-kit)
-[![Commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![MIT License](https://img.shields.io/npm/l/react-player-ui.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-
-
-- [Installation](#installation)
-- [Development](#development)
-- [Production](#production)
-- [Releases](#releases)
-- [Contributing](#contibuting)
-- [Stack](#stack)
+- [Available Scripts](#available-scripts)
+  - [npm start](#npm-start)
+  - [npm test](#npm-test)
+  - [npm run build](#npm-run-build)
+  - [npm run release](#npm-run-release)
 
 
-## Installation
+## Available Scripts
 
-### install dependancies
+In the project directory, you can run:
 
-```console
-$ npm i
-```
+### `npm start`
 
-### Run application locally
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```console
-$ npm start
-```
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-Then go to [http://localhost:8080/](http://localhost:8080/)
+### `npm test`
 
+Launches the test runner in the interactive watch mode.<br>
 
+### `npm run build`
 
-## Development
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Run tests
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-```console
-$ npm test
-$ npm run watch:test
-```
+### `npm run release`
 
-### Run cover
-
-```console
-$ npm run cover
-```
-
-### Run the local server for styleguide
-
-```console
-$ npm run styleguide-server
-```
-
-### Run build for the styleguide
-
-```console
-$ npm run styleguide-build
-```
-
-
-
-## Production
-
-### Publish a release
-
-```console
-$ npm run publish
-```
-
-### Run build production
-
-```console
-$ npm run build
-```
-
-
-## Changelog
-* [Changelog](CHANGELOG.md)
-
-
-
-## Contributing
-* [Contributing](CONTRIBUTING.md)
-
-
-
-## Stack
-* [React.js](https://facebook.github.io/react/)
-* [webpack](https://webpack.github.io/docs/)
-* [Babel](https://babeljs.io/)
-* [PostCSS](http://postcss.org/)
-* [Mocha](https://mochajs.org/)
+Create a new release and generate the changelog between the previous release
