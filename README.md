@@ -1,5 +1,6 @@
 # REACT STARTER KIT
 
+[![Travis](https://api.travis-ci.org/devaublanc/react-starter-kit.svg?style=flat-square)](https://travis-ci.org/devaublanc/react-starter-kit)
 [![Commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Table of Contents
