@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '9'
+before_install:
+  - npm i -g yarn
+script:
+  - yarn test
+  - yarn build
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
